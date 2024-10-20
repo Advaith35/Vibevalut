@@ -43,12 +43,16 @@
 ## Example
 
 To download a Spotify playlist:
+   ```bash
 
-Enter the YouTube or Spotify playlist link: open.spotify.com/playlist/your_playlist_id
+    Enter the YouTube or Spotify playlist link: open.spotify.com/playlist/your_playlist_id
 
-just enter your link there 
+```
 
-thank you !!
+that's it if you enter the link it will automatically do the rest . 
+
+Thank You 
+Hope you use it well !
 
 
 
