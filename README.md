@@ -21,7 +21,7 @@
 
 1. **Clone the repository:**
    ```bash
-   git clone <[repository-url](https://github.com/Advaith35/Vibevalut)>
+   git clone <(https://github.com/Advaith35/Vibevalut)>
    cd VibeVault
 2. **Install the required libraries:**
    ```bash
