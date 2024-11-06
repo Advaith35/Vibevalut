@@ -1,7 +1,7 @@
 from googleapiclient.discovery import build
 import os
 import re
-API_KEY = "API_KEY_enter"  # Replace with your YouTube API key
+API_KEY = "AIzaSyCk4aZ6qvMFA19i4o5r3Hitop-Yj390sKo"  # Replace with your YouTube API key
 
 def search_youtube(query):
     youtube = build("youtube", "v3", developerKey=API_KEY)

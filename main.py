@@ -1,8 +1,8 @@
 import re
-from ytinfo import search_youtube
+import os
+from ytinfo import search_youtube, get_playlist_videos, is_playlist
 from m3downloader import download_audio
 from spotdat import get_playlist_tracks  # Import the Spotify function
-import os
 
 def is_spotify_link(link):
     # Regex to check if the input link is a Spotify playlist link
@@ -37,7 +37,30 @@ def main():
         else:
             print("No tracks found or an error occurred.")
 
+    elif 'youtube.com/playlist?' in link:
+        # Check if it is a YouTube playlist
+        print(f"Fetching YouTube playlist details for: {link}")
+        playlist_id = is_playlist(link)
+        if playlist_id:
+            video_urls = get_playlist_videos(playlist_id)
+            playlist_name = f"YouTube Playlist - {playlist_id}"
+
+            # Create a folder for the playlist in the Music directory
+            music_folder = os.path.join(os.path.expanduser('~'), 'Music', playlist_name)
+            if not os.path.exists(music_folder):
+                os.makedirs(music_folder)
+
+            print(f"Created folder: {music_folder}")
+
+            # Loop through video URLs and download each
+            for video_url in video_urls:
+                print(f"Downloading: {video_url}")
+                download_audio(video_url, music_folder)
+        else:
+            print("No videos found or an error occurred with the playlist link.")
+
     else:
+        # For single YouTube video links or search terms
         print(f"Searching YouTube for: {link}")
         video_url = search_youtube(link)
         

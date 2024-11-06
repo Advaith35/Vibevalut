@@ -3,8 +3,8 @@ from spotipy.oauth2 import SpotifyOAuth
 import re
 
 # Replace with your own credentials
-client_id = 'Client_id_enter'  # Must match your Spotify Developer Dashboard
-client_secret = 'Client_secret_enter'  # Must match your Spotify Developer Dashboard
+client_id = 'f67f196a44d64ae68b0da778bbba78f9'
+client_secret = 'd6b0ff24e6434b67a2fe9c2f37d18404'
 redirect_uri = 'http://localhost:3000'  # Must match your Spotify Developer Dashboard
 
 # Initialize the Spotify client with necessary permissions
