@@ -72,4 +72,9 @@ def main():
             print("No video found for the given link.")
 
 if __name__ == "__main__":
-    main()
+    while True:
+        main()
+        print("\n")
+        choice = input("Do you want to download another playlist? (y/n): ")
+        if choice.lower() != 'y':
+            break
